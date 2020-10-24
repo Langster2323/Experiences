@@ -1,36 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import ImageCard from './components/ImageCard';
+import pictures from './pictures';
 
 function App() {
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  // const pictureList = () => {
+  //   setImages([
+  //     ...pictures
+  //   ]);
+  // }
+
+  useEffect(() => {
+    setImages([
+      ...pictures
+    ]);
+    setLoading(false)
+  }, []);
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img src="https://source.unsplash.com/random" alt="" className="w-full" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-purple-500 text-xl mb-2">
-          Photo by Ahkeem
-        </div>
-        <ul>
-          <li>
-            <strong>Title: </strong>
-            First car
-          </li>
-        </ul>
-      </div>
-      <div className="px-6 py-4">
-        <span className="inline-block 
-        bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          #tag1
-        </span>
-        <span className="inline-block 
-        bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          #tag2
-        </span>
-        <span className="inline-block 
-        bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-          #tag3
-        </span>
+    <div className="mx-auto container">
+      <div className="font-bold text-purple-500 text-xl mb-2">
+                Photo by Ahkeem
+                </div>
+      <div className="grid grid-cols-3 gap-4">
+        {images.map(image => (
+          <ImageCard key={image.id} image={image} />
+        ))}
       </div>
     </div>
   );
