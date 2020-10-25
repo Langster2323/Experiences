@@ -23,7 +23,7 @@ function App() {
       <div className="font-bold text-purple-500 text-xl mb-2">
                 Photo by Ahkeem
                 </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="lg:grid lg:grid-cols-3 lg:gap-4 sm:grid sm:grid-cols-2 sm:gap-3">
         {images.map(image => (
           <ImageCard key={image.id} image={image} />
         ))}
