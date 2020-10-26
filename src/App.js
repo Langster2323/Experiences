@@ -20,9 +20,9 @@ function App() {
   }, []);
   return (
     <div className="mx-auto container">
-      <div className="font-bold text-purple-500 text-xl mb-2">
+      <h1 className="font-bold text-purple-500 text-6xl mb-2 text-center py-8 animate-bounce ease-duration-600">
                 Photo by Ahkeem
-                </div>
+                </h1>
       <div className="lg:grid lg:grid-cols-3 lg:gap-4 sm:grid sm:grid-cols-2 sm:gap-3">
         {images.map(image => (
           <ImageCard key={image.id} image={image} />
