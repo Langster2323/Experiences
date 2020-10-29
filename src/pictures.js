@@ -58,10 +58,12 @@ import Tokyo from './pictures/tokyo.jpg';
 import Wholefam from './pictures/wholefam.jpg';
 import Wildberry from './pictures/wildberry.jpg';
 import Castle from './pictures/castle.jpg';
+import Jetta from './pictures/jetta.jpg';
 
 
 const pictures = [
     {img: Cali, title: 'Cali', tags: '#travel, #cali'},
+    {img: Jetta, title: '2002 Jetta', tags: '#firstcar'},
     {img: Castle, title: 'Castle', tags: '#travel'},
     {img: Costume, title: 'Costume', tags: '#travel'},
     {img: MovementRev, title: 'Movement Revolution', tags: '#dance'},
